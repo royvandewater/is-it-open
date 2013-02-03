@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', :github => 'rails/rails'
 
-gem 'mysql'
+gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.

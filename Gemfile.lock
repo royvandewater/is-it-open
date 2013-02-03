@@ -87,7 +87,7 @@ GEM
     mime-types (1.19)
     minitest (4.5.0)
     multi_json (1.5.0)
-    mysql (2.9.0)
+    mysql2 (0.3.11)
     polyglot (0.3.3)
     rack (1.5.1)
     rack-test (0.6.2)
@@ -126,7 +126,7 @@ DEPENDENCIES
   coffee-rails!
   jbuilder (~> 1.0.1)
   jquery-rails
-  mysql
+  mysql2
   rails!
   sass-rails!
   sprockets-rails (~> 2.0.0.rc1)

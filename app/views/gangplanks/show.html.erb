@@ -1,0 +1,7 @@
+<% content_for :js do %>
+  activateNav('status');
+<% end %>
+
+<div class="jumbotron">
+  <h1>Gangplank Chandler is: <strong><%= @gangplank.status.titleize %><strong></h1>
+</div>

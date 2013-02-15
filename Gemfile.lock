@@ -87,6 +87,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
+    libv8 (3.11.8.13)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -109,6 +110,7 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
+    ref (1.0.2)
     sass (3.2.5)
     sprockets (2.8.2)
       hike (~> 1.2)
@@ -119,6 +121,9 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    therubyracer (0.11.3)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.17.0)
     thread_safe (0.1.0)
       atomic
@@ -145,5 +150,6 @@ DEPENDENCIES
   rails!
   sass-rails!
   sprockets-rails (~> 2.0.0.rc1)
+  therubyracer
   turbolinks
   uglifier (>= 1.0.3)

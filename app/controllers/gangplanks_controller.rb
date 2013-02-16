@@ -15,6 +15,6 @@ class GangplanksController < ApplicationController
 
 private
   def status_params
-    params.require(:gangplank).permit :status
+    params.require(:gangplank).permit :open_until
   end
 end

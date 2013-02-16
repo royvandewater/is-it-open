@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130203170253) do
+ActiveRecord::Schema.define(version: 20130216002149) do
 
   create_table "gangplanks", force: true do |t|
-    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "open_until"
   end
 
 end

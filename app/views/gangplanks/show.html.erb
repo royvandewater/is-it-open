@@ -4,4 +4,8 @@
 
 <div class="jumbotron">
   <h1>Gangplank Chandler is: <strong><%= gangplank_status @gangplank %><strong></h1>
+
+  <% if @gangplank.open? %>
+    <h3>(And will be until <%= formatted_time @gangplank.open_until %>)</h3>
+  <% end %>
 </div>

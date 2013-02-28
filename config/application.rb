@@ -23,3 +23,5 @@ module IsItOpen
     # config.i18n.default_locale = :de
   end
 end
+
+Time::DATE_FORMATS[:pretty_time] = "%l:%M%P"

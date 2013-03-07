@@ -18,7 +18,7 @@
 #= require_tree .
 
 $ ->
-  isItOpen = new IsItOpen()
+  window.isItOpen = new IsItOpen()
   Backbone.history.start pushState: true
 
   $('a').click ($event) ->

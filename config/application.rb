@@ -21,7 +21,10 @@ module IsItOpen
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
   end
 end
 
+ActiveRecord::Base.include_root_in_json = false
 Time::DATE_FORMATS[:pretty_time] = "%l:%M%P"
+

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', :github => 'rails/rails'
 
 gem 'mysql2'
+gem 'eco'
 
 # Gems used only for assets and not required
 # in production environments by default.

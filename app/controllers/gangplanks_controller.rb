@@ -1,10 +1,5 @@
 class GangplanksController < ApplicationController
   def show
-    @gangplank = Gangplank.first
-  end
-
-  def edit
-    @gangplank = Gangplank.first
   end
 
   def update

@@ -7,21 +7,15 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-
-  <script type="text/javascript">
-    $(function() {
-      <%= yield :js %>
-    });
-  </script>
 </head>
 <body>
 
 <div class="container-narrow">
   <div class="masthead">
     <ul class="nav nav-pills pull-right">
-      <li class="status"><%= link_to 'Status', root_path %></li>
-      <li class="update"><%= link_to 'Update', edit_gangplank_path %></li>
-      <li><%= link_to 'Source', 'http://github.com/royvandewater/is-it-open' %></li>
+      <li class="status"><a href="/">Status</a></li>
+      <li class="update"><a href="/edit">Edit</a></li>
+      <li><a href="http://github.com/royvandewater/is-it-open">Source</a></li>
     </ul>
 
     <h3 class="muted">Is It Open?</h3>
@@ -29,6 +23,8 @@
 
   <hr />
 
+  <div id="main">
+  </div>
   <%= yield %>
 </div>
 

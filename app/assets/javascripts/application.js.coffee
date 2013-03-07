@@ -13,8 +13,17 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
+#= require lib/underscore
 #= require_tree ./lib
 #= require_tree .
 
-window.activateNav = (nav) => 
-  $(".nav .#{nav}").addClass 'active'
+$ ->
+  isItOpen = new IsItOpen()
+  Backbone.history.start pushState: true
+
+  $('a').click ($event) ->
+    $event.preventDefault()
+    $link = $ this
+    isItOpen.navigate $link.attr('href'), true
+    return false
+

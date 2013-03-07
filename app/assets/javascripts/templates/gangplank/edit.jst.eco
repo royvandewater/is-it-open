@@ -1,0 +1,9 @@
+<div class="row-fluid">
+  <div class="offset3 span9">
+    <form class="form-inline pull-left">
+      <input type="time" placeholder="Open Until" class="input-medium tall-time open-until" />
+      <input type="submit" value="Save" class="btn btn-large btn-primary save" />
+      <input type="submit" value="Close GP" class="btn btn-large btn-danger close" />
+    </form>
+  </div>
+</div>

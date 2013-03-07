@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h1>Gangplank Chandler is: <strong><%= Helpers.status @open %><strong></h1>
+
+  <% if @open: %>
+    <h3>(And will be until <%= Helpers.time @open_until %>)</h3>
+  <% end %>
+</div>
+

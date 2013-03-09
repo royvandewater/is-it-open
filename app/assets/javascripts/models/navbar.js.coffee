@@ -1,0 +1,1 @@
+class window.Navbar extends Backbone.Model

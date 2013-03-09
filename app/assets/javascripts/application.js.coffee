@@ -20,10 +20,3 @@
 $ ->
   window.isItOpen = new IsItOpen()
   Backbone.history.start pushState: true
-
-  $('a').click ($event) ->
-    $event.preventDefault()
-    $link = $ this
-    isItOpen.navigate $link.attr('href'), true
-    return false
-

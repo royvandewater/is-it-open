@@ -2,6 +2,7 @@ class window.EditGangplankView extends Backbone.View
   template: JST['templates/gangplank/edit']
 
   initialize: =>
+    @loading = false
     @model.on 'change', @render
 
   events:
@@ -11,6 +12,7 @@ class window.EditGangplankView extends Backbone.View
 
   context: =>
     open_until: moment @model.get 'open_until'
+    loading: @loading
 
   render: =>
     @$el.html @template @context()
@@ -21,10 +23,13 @@ class window.EditGangplankView extends Backbone.View
 
     @model.set {open_until: datetime.format()}, silent: true
 
-  onClickCloseGP: ($event) =>
-    $event.preventDefault()
-    @model.save {open_until: null}, success: => @model.fetch()
+  onClickCloseGP: =>
+    @model.set {open_until: null}, silent: true
+    @onClickUpdate arguments...
 
   onClickUpdate: ($event) =>
     $event.preventDefault()
-    @model.save {}, success: => @model.fetch()
+    @loading = true
+    @render()
+    @model.save {}, success: =>
+      @model.fetch success: => Backbone.history.navigate '/', trigger: true

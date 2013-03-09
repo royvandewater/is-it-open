@@ -1,19 +1,21 @@
-  <div class="row-fluid">
-    <div class="span12">
-      <% if @loading: %>
-        <div class="progress progress-striped active">
-          <div class="bar" style="width: 100%;"></div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
 <div class="row-fluid">
-  <div class="offset3 span9">
-    <form class="form-inline">
-      <input type="time" placeholder="Open Until" value="<%= Helpers.military_time @open_until %>" class="input-medium tall-time open-until" />
-      <input type="submit" value="Update" class="btn btn-large btn-primary update" />
-      <input type="submit" value="Close GP" class="btn btn-large btn-danger close-gp" />
-    </form>
+  <div class="span12">
+    <% if @loading: %>
+      <div class="progress progress-striped active">
+        <div class="bar" style="width: 100%;"></div>
+      </div>
+    <% end %>
   </div>
 </div>
+
+<form class="form-inline">
+  <div class="row-fluid">
+    <div class="offset3 span5">
+      <div class="input-append">
+        <input type="time" placeholder="Open Until" value="<%= Helpers.military_time @open_until %>" class="input-medium tall-time open-until" />
+        <input type="submit" value="Update" class="btn btn-large btn-primary update" />
+        <input type="submit" value="Close GP" class="btn btn-large btn-danger close-gp" />
+      </div>
+    </div>
+  </div>
+</form>

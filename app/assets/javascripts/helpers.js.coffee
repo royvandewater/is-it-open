@@ -1,6 +1,6 @@
 class window.Helpers
   @military_time: (time) =>
-    moment(time)?.format 'HH:mm'
+    moment(time)?.format 'HH:mm' if time?
 
   @time: (time) =>
     moment(time).format 'h:mma'

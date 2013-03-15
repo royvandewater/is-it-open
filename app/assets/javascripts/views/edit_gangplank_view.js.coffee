@@ -2,20 +2,17 @@ class window.EditGangplankView extends Backbone.View
   template: JST['templates/gangplank/edit']
 
   initialize: =>
-    @loading = false
     @model.on 'change', @render
 
   events:
     'change .open-until': 'onChange'
-    'click .update': 'onClickUpdate'
-    'click .close-gp': 'onClickCloseGP'
-
-  context: =>
-    open_until: moment @model.get 'open_until'
-    loading: @loading
+    'click .update':      'onClickUpdate'
+    'click .close-gp':    'onClickCloseGP'
 
   render: =>
-    @$el.html @template @context()
+    @$el.html @template @model.toJSON()
+    @$el.prepend (new LoadingView).render() if @loading
+    @$el
 
   onChange: ($event) =>
     time   = moment @$('input.open-until').val(), 'HH:mm'

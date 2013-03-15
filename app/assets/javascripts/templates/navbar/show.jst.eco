@@ -1,14 +1,14 @@
 <ul class="nav nav-pills pull-right">
-  <li class="show <%= 'active' if @active == 'show' %>">
-    <a href="/">Status</a>
+  <li class="show">
+    <a href="#">Status</a>
   </li>
 
-  <li class="edit <%= 'active' if @active == 'edit' %>">
-    <a href="/edit">Edit</a>
+  <li class="edit">
+    <a href="#">Edit</a>
   </li>
   
   <li class="source">
-    <a href="http://github.com/royvandewater/is-it-open">Source</a>
+    <a href="#">Source</a>
   </li>
 </ul>
 

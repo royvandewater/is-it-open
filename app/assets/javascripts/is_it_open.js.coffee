@@ -2,8 +2,8 @@ class window.IsItOpen extends Backbone.Router
   initialize: =>
     @navbar = new Navbar
 
-    @navbarView = new NavbarView model: @navbar
-    $('.masthead').html @navbarView.render()
+    navbarView = new NavbarView model: @navbar
+    $('.masthead').html navbarView.render()
 
     @gangplank = new Gangplank
     @gangplank.fetch()
